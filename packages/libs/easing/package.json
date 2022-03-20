@@ -1,0 +1,13 @@
+{
+  "name": "@animotion/easing",
+  "version": "0.1.0",
+  "description": "Easing package",
+  "main": "dist/lib/index",
+  "license": "MIT",
+  "scripts": {
+    "start": "tsc --watch",
+    "build": "tsc",
+    "test": "jest --coverage --runInBand",
+    "test:unit": "jest unit --coverage --runInBand"
+  }
+}

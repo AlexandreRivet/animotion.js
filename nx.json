@@ -1,0 +1,27 @@
+{
+    "extends": "@nrwl/workspace/presets/core.json",
+    "npmScope": "playplay",
+    "tasksRunnerOptions": {
+      "default": {
+        "runner": "@nrwl/nx-cloud",
+        "options": {
+          "cacheableOperations": [
+            "build",
+            "test"
+          ],
+          "accessToken": ""
+        }
+      }
+    },
+    "targetDependencies": {
+      "build": [
+        {
+          "target": "build",
+          "projects": "dependencies"
+        }
+      ]
+    },
+    "affected": {
+      "defaultBase": "master"
+    }
+  }

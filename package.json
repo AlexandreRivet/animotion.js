@@ -1,0 +1,26 @@
+{
+  "name": "animotion.js-monorepo",
+  "version": "0.1.0",
+  "description": "Animation library",
+  "repository": "git@github.com:AlexandreRivet/animotion.js.git",
+  "author": "AlexandreRivet <alex-rivet94@hotmail.fr>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@nrwl/cli": "latest",
+    "@nrwl/devkit": "13.7.1",
+    "@nrwl/eslint-plugin-nx": "13.7.2",
+    "@nrwl/jest": "13.7.2",
+    "@nrwl/js": "^13.7.2",
+    "@nrwl/linter": "13.7.2",
+    "@nrwl/nx-cloud": "latest",
+    "@nrwl/tao": "latest",
+    "@nrwl/workspace": "latest",
+    "@types/jest": "^27.1.2",
+    "eslint": "^8.11.0",
+    "jest": "^27.5.1",
+    "lerna": "^4.0.0",
+    "ts-jest": "^27.1.2",
+    "typescript": "^4.6.2"
+  }
+}

@@ -1,0 +1,39 @@
+{
+    "root": "packages/libs/easing",
+    "sourceRoot": "packages/libs/easing/lib",
+    "projectType": "library",
+    "targets": {
+      "build": {
+        "executor": "@nrwl/js:tsc",
+        "outputs": [
+          "{options.outputPath}"
+        ],
+        "options": {
+          "outputPath": "packages/libs/easing/dist",
+          "main": "packages/libs/easing/lib/index.ts",
+          "tsConfig": "packages/libs/easing/tsconfig.lib.json"
+        }
+      },
+      "lint": {
+        "executor": "@nrwl/linter:eslint",
+        "outputs": [
+          "{options.outputFile}"
+        ],
+        "options": {
+          "lintFilePatterns": [
+            "packages/libs/easing/**/*.ts"
+          ]
+        }
+      },
+      "test": {
+        "executor": "@nrwl/jest:jest",
+        "outputs": [
+          "coverage/packages/easing"
+        ],
+        "options": {
+          "jestConfig": "packages/libs/easing/jest.config.js",
+          "passWithNoTests": true
+        }
+      }
+    }
+  }
