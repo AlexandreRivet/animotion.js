@@ -1,27 +1,27 @@
 {
-    "extends": "@nrwl/workspace/presets/core.json",
-    "npmScope": "playplay",
-    "tasksRunnerOptions": {
-      "default": {
-        "runner": "@nrwl/nx-cloud",
-        "options": {
-          "cacheableOperations": [
-            "build",
-            "test"
-          ],
-          "accessToken": ""
-        }
+  "extends": "@nrwl/workspace/presets/core.json",
+  "npmScope": "playplay",
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "test"
+        ],
+        "accessToken": "ZTA4MzcwMzAtYmU2Ni00ZjE3LTg3ZjUtY2JlODgzMTRlYWUyfHJlYWQtd3JpdGU="
       }
-    },
-    "targetDependencies": {
-      "build": [
-        {
-          "target": "build",
-          "projects": "dependencies"
-        }
-      ]
-    },
-    "affected": {
-      "defaultBase": "master"
     }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
+  },
+  "affected": {
+    "defaultBase": "master"
   }
+}
