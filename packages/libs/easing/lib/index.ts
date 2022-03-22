@@ -1,3 +1,9 @@
-export * from './penner';
+/**
+ * @module
+ */
 
-export * from './parser';
+export * from './bezier';
+export * from './penner';
+export * from './steps';
+
+export * from './utils';

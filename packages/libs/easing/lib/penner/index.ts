@@ -8,6 +8,7 @@ export * from './circ';
 export * from './cubic';
 export * from './elastic';
 export * from './expo';
+export * from './linear';
 export * from './quad';
 export * from './quart';
 export * from './quint';

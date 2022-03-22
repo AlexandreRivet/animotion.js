@@ -1,5 +1,11 @@
-export const easeInQuint = (t: number): number => t * t * t * t * t;
+import { EasingFunction } from "../utils";
 
-export const easeOutQuint = (t: number): number => 1 - (1 - t) ** 5;
+export const easeInQuint: EasingFunction = (t: number): number => t * t * t * t * t;
 
-export const easeInOutQuint = (t: number): number => t < 0.5 ? 16 * t * t * t * t * t : 1 - ((-2 * t + 2) ** 5) * 0.5;
+export const easeOutQuint: EasingFunction = (t: number): number => 1 - (1 - t) ** 5;
+
+export const easeInOutQuint: EasingFunction = (t: number): number => (
+  t < 0.5
+    ? 16 * t * t * t * t * t
+    : 1 - ((-2 * t + 2) ** 5) * 0.5
+);
