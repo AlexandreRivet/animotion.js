@@ -26,16 +26,34 @@ const getSlope = (t: number, a1: number, a2: number): number => (
 );
 
 const binarySubdivide = (x: number, a: number, b: number, x1: number, x2: number): number => {
-  return 0;
+  var currentX, currentT, i = 0;
+  do {
+    currentT = a + (b - a) * 0.5;
+    currentX = calcBezier(currentT, x1, x2) - x;
+    if (currentX > 0.0) {
+      b = currentT;
+    } else {
+      a = currentT;
+    }
+  } while (Math.abs(currentX) > subdivisionPrecision && ++i < subdivisionMaxIterations);
+  return currentT;
 };
 
 const newtonRaphsonIterate = (x: number, guessForT: number, x1: number, x2: number): number => {
-  return 0;
+  for (var i = 0; i < newtonIterations; ++i) {
+    var currentSlope = getSlope(guessForT, x1, x2);
+    if (currentSlope === 0.0) {
+      return guessForT;
+    }
+    var currentX = calcBezier(guessForT, x1, x2) - x;
+    guessForT -= currentX / currentSlope;
+  }
+  return guessForT;
 };
 
 export const bezier = (x1: number = 0, y1: number = 0, x2: number = 0, y2: number = 0): EasingFunction => {
   if (x1 < 0 || x1 > 1 || x2 < 0 || x2 > 1) {
-    throw new Error('values must be between')
+    throw new Error('Values must be between 0 and 1')
   }
 
   if (x1 === y1 && x2 === y2) {
