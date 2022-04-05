@@ -1,3 +1,3 @@
-import { EasingFunction } from "../utils";
+import { EasingDeclarator } from "../utils";
 
-export const linear: EasingFunction = (t: number) => t;
+export const linear: EasingDeclarator = () => (t: number) => t;

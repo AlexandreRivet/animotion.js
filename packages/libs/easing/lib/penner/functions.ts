@@ -1,4 +1,4 @@
-import { EasingFunction } from '../utils';
+import { EasingDeclarator, EasingFunction } from '../utils';
 
 import { easeInBack, easeOutBack, easeInOutBack } from './back';
 import { easeInBounce, easeOutBounce, easeInOutBounce } from './bounce';
@@ -12,7 +12,7 @@ import { easeInQuart, easeOutQuart, easeInOutQuart } from './quart';
 import { easeInQuint, easeOutQuint, easeInOutQuint } from './quint';
 import { easeInSine, easeOutSine, easeInOutSine } from './sine';
 
-export const functions: Record<string, EasingFunction> = {
+export const functions: Record<string, EasingDeclarator> = {
   linear,
   easeInSine,
   easeOutSine,

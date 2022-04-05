@@ -9,7 +9,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { bezier } from '@animotion/easing';
+import { easeInOutBack as easeFnc } from '@animotion/easing';
 
 import Curve from './components/CurveView.vue';
 
@@ -21,7 +21,8 @@ export default defineComponent({
   setup() {
     const points: { x: number; y: number }[] = [];
     const nbPoints = 100;
-    const curve = bezier(0.78, 0.45, 0.11, 1.61);
+    // const curve = bezier(0.78, 0.45, 0.11, 1.61);
+    const curve = easeFnc();
     for (let i = 0; i <= nbPoints; i += 1) {
       const x = i / nbPoints;
       points.push({x, y: curve(x) });

@@ -29,5 +29,5 @@ export const easeInOutElastic: EasingFunction = (t: number): number => (
       ? 1
       : t < 0.5
         ? -(2 ** (10 * (2 * t - 1))) * Math.sin((20 * t - c5) * c4) * 0.5
-        : (2 ** (-10 * (2 * t - 1))) * Math.sin((20 * t * c5) * c4) * 0.5 + 1
+        : (2 ** (-10 * (2 * t - 1))) * Math.sin((20 * t - c5) * c4) * 0.5 + 1
 );
